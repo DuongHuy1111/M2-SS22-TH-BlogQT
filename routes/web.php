@@ -22,3 +22,7 @@ Route::group(['middleware' => 'locale'], function () {
     Route::get('change-language/{language}', 'LanguageController@changeLanguage')->name('user.change-language');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
